@@ -1,0 +1,205 @@
+* {
+    padding: 0;
+    Margin: 0;
+}
+header, nav, main, article, aside, section, footer, video,
+audio, figure {
+    display: block;
+}
+html {
+    line-height: 1.5;
+    font-size: 100%; /* does not hurt */
+    background-color: oldlace;
+}
+h1 {
+    font-size: 2.4em;
+    color: #fff9d6;
+    /* text-shadow: horiz. offset, vert. offset, blure, color */
+    text-shadow: 1px 1px 2px #fff,  
+                 2px 2px 3px #666,
+                 3px 3px 5px #999;
+}
+h2 {
+    font-size: 1.5em;
+   
+}
+p {
+    font-size: .875em; /* 14px */
+    margin-bottom: 1.5em;
+}
+
+ul {
+    font-size: .875em;
+}
+
+a {
+    color: #4a6147; /* #369; */ 
+    text-decoration: none;
+}
+a:hover  {
+    color: #963;
+}
+/* make img Responsive */
+img {
+    max-width: 100%; 
+    height: auto;
+}
+section {
+    font-family: Verdana, Geneva, sans-serif;
+    max-width: 960px;
+    padding: 2%;
+    margin: auto;
+    box-sizing: border-box;
+    margin-top: -15%;
+}
+header {
+    text-align: center;
+    position: relative;
+}
+header h1, h2 {
+    color: #4a6147; /* #033770; */
+}
+figcaption {
+    font-size: .75em;
+    text-align: right;
+    margin-right: 10px;
+}
+
+/* Navigation - Hamburger menu for mobile */
+nav.mainNav {
+   /* background-color: #dedede; */
+}
+.mainNav ul {
+    list-style-type: none;
+}
+.mainNav li {
+    border-bottom: solid 1px #999;
+}
+.mainNav li a {
+    display: block;
+    padding: .5em;
+}
+#navigation nav {
+    height: 0;
+    overflow: hidden;
+}
+   /* fixing problems on some browsers - tricking */ 
+body {
+    -webkit-animation: bugfix infinite 1s;
+}
+@webkit-keyframes bugfix {
+    from { padding: 0;}
+    to { padding: 0;}
+}
+#navigation input[type=checkbox] {
+    position: absolute;
+    top: -999em;
+    left: -999em;  /* hide checkbox out of screen */
+}
+#navigation label {
+    display: block;
+    background: url("../images/nav-icon.png") no-repeat right center;
+    position: relative;
+    top: -100px;
+    right: 8px;
+    text-indent: -999em;
+    cursor: pointer;
+    user-select: none;
+}
+#navigation input[type=checkbox]:checked ~ nav {
+    height: auto;
+    overflow: hidden;
+}
+/* End of Navigation */
+
+video {
+    width: 100%;
+    height: auto;
+}  
+
+/* Code for Youtube Responsive video */
+.video {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top:25px;
+    height:0;
+    overflow: hidden;
+}
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* end code for video */
+
+footer {
+    background-color: #5a2f22; /*#4a6147*/;
+    color: #fff;
+    text-align: center;
+    padding: .75em 0 0.1em;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.clearIt {
+    clear: both;
+}
+
+@media screen and (min-width: 480px) {
+    header h1 {
+        position: absolute;
+        top: 75px;
+        left: 2%;
+        color: #fff;
+        z-index: 5;
+        text-shadow: 1px 1px 2px #000,
+                     2px 2px 3px #666,
+                     3px 3px 5px #333;
+    }
+    h2 {
+        font-size: 1.1em;
+        color: #5a2f22;
+    }
+       
+    #navigation label {  /* hamburger position */
+        top: -40px;
+        
+    }
+    article.primary {
+    float: left;
+    width: 59%;
+    margin-right: 2%;
+}
+aside {
+    float: right;
+    width: 35%;
+    background-color: #ccc;
+    padding: 2%;
+}
+    .featured img {
+        border: solid 4px #dedede;
+    }
+   
+    
+}
+@media screen and (min-width: 580px) {
+    header h1 {
+        top: 80%;
+        
+    }
+    #navigation label {
+        display: none;
+    }
+    #navigation nav {
+        height: auto;
+        overflow: visible;
+    }
+    #navigation li {
+        display: inline-block;
+        border: none;
+        
+    }
+}
+
